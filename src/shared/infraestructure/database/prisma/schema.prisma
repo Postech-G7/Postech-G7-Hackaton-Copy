@@ -13,6 +13,29 @@ model User {
   email     String   @unique @db.VarChar(255)
   password  String   @db.VarChar(100)
   createdAt DateTime @default(now())
+  videos    Video[]  @relation("UserVideos")
 
-  @@map("users") //nome da tabela no banco de dados
+  @@map("users")
+}
+
+enum VideoStatus {
+  processing
+  completed
+  failed
+  retrieved
+}
+
+model Video {
+  id        String      @id @db.Uuid
+  title     String      @db.VarChar(255)
+  userEmail String      @db.VarChar(255)
+  base64    String      @db.Text
+  userId    String      @db.Uuid
+  user      User        @relation(fields: [userId], references: [id], name: "UserVideos")
+  status    VideoStatus @default(processing)
+  createdAt DateTime    @default(now())
+
+  @@index([userId])
+  @@index([userEmail])
+  @@map("videos")
 }

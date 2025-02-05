@@ -21,8 +21,8 @@ import { SigninUseCase } from '../application/usecases/signin-users.usecase';
 import { GetUserUseCase } from '../application/usecases/get-user.usecase';
 import { UpdateUserUseCase } from '../application/usecases/update-user.usecase';
 import { UpdatePasswordUseCase } from '../application/usecases/update-password.usecase';
-import { UpdatePasswordDto } from './dtos/update-password.dto copy';
-import { ListUsersDto } from './dtos/list-users.dto copy';
+import { UpdatePasswordDto } from './dtos/update-password.dto';
+import { ListUsersDto } from './dtos/list-users.dto';
 import { SigninDto } from './dtos/signin.dto';
 import {
   UserCollectionPresenter,

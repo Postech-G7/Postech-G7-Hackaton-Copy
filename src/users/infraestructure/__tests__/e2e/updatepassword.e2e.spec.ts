@@ -9,7 +9,7 @@ import { UserEntity } from '../../../domain/entities/user.entity';
 import { EnvConfigModule } from '../../../../shared/infraestructure/env-config/env-config.module';
 import { DatabaseModule } from '../../../../shared/infraestructure/database/database.module';
 import { HashProvider } from '../../../../shared/application/providers/implementations/hash-provider';
-import { UpdatePasswordDto } from '../../dtos/update-password.dto copy';
+import { UpdatePasswordDto } from '../../dtos/update-password.dto';
 import { HashProviderContract } from '../../../../shared/application/providers/hash-provider-interface';
 import { userDataBuilder } from '../../../domain/testing/helpers/user-data-builder';
 describe('UsersController e2e tests', () => {

@@ -21,5 +21,9 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-namespace': 'off',  // Disable namespace rule globally
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'no-console': 'warn',
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }]
   },
 };

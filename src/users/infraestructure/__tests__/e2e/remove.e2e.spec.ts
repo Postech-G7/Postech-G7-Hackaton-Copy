@@ -30,7 +30,7 @@ describe('UsersController e2e tests', () => {
         EnvConfigModule,
         UsersModule,
         DatabaseModule.forTest(prismaService),
-        InvalidCredentialsError
+        InvalidCredentialsError,
       ],
     }).compile();
     app = module.createNestApplication();

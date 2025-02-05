@@ -21,10 +21,10 @@ export class AuthService {
     return { accessToken };
   }
 
-  async verifyJwt(token: string) {
+  async verifyJwt<T>(token: string): Promise<T> {
     const payload = await this.jwtService.verifyAsync(token, {
       secret: this.envConfigService.getJwtSecret(),
     });
-    return payload;
+    return payload as T;
   }
 }

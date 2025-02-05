@@ -12,7 +12,7 @@ interface StubEntity {
   price: number;
 }
 
-let data: StubEntity = {
+const data: StubEntity = {
   name: 'value',
   price: 10,
 };
